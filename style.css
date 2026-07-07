@@ -13,7 +13,7 @@
     --btn-hover: rgba(100, 223, 223, 0.9);
 }
 
-/* Global Elements */
+/* Global Reset */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -25,20 +25,21 @@ body {
     color: var(--text-main);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.6;
-    padding: 0 16px;
+    padding: 0 16px; /* horizontal only */
 }
 
+/* Headings */
 h1, h2, h3 {
     font-weight: 700;
     margin-top: 0;
     margin-bottom: 12px;
 }
 
-/* Header & Navigation Layout */
+/* Header & Navigation */
 header {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 12px 0;
+    padding: 4px 0; /* tighter */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -68,28 +69,18 @@ nav a:hover, nav a.active {
     color: var(--text-main);
 }
 
-/* Common Layout Containers */
+/* Layout Containers */
 .container {
     max-width: 800px;
-    margin: 20px auto;
+    margin: 0 auto; /* no vertical gap */
+    padding-top: 0; /* remove top padding */
 }
 
-/* Footer layout */
-footer {
-    max-width: 1100px;
-    margin: 30px auto 20px auto;
-    padding-top: 15px;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    text-align: center;
-    font-size: 14px;
-    color: var(--text-muted);
-}
-
-/* Hero Video Container */
+/* Hero Section */
 .hero-image {
     position: relative;
     max-width: 1100px;
-    margin: 10px auto;
+    margin: -10px auto 0 auto; /* pull closer to header */
     border-radius: 12px;
     overflow: hidden;
 }
@@ -104,7 +95,7 @@ footer {
 /* Download Button */
 .download-btn {
     display: block;
-    margin: 20px auto;
+    margin: 16px auto;
     font-size: 18px;
     font-weight: 600;
     padding: 12px 24px;
@@ -113,11 +104,13 @@ footer {
     border-radius: 6px;
     text-decoration: none;
     text-align: center;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(100, 223, 223, 0.3); /* subtle glow */
 }
 
 .download-btn:hover {
     background-color: var(--btn-hover);
+    box-shadow: 0 6px 16px rgba(100, 223, 223, 0.5);
 }
 
 /* Toggle Button */
@@ -152,13 +145,24 @@ footer {
     to { opacity: 1; transform: translateY(0); }
 }
 
+/* Footer */
+footer {
+    max-width: 1100px;
+    margin: 20px auto 10px auto;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
 /* Mobile Styles */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
         gap: 6px;
         text-align: center;
-        padding: 8px 0;
+        padding: 6px 0;
     }
     
     nav {
@@ -174,16 +178,16 @@ footer {
     }
 
     .container {
-        margin: 15px auto;
+        margin: 0 auto;
     }
 
     .hero-image {
-        margin: 8px auto;
+        margin: -6px auto 0 auto;
     }
 
     footer {
-        padding: 20px 15px;
-        margin: 20px auto;
+        padding: 15px 10px;
+        margin: 15px auto;
     }
 
     input, textarea, button {
