@@ -137,9 +137,10 @@ nav a:hover, nav a.active {
   color: var(--accent-color);
 }
 
+/* Default: Desktop grid */
 .testimonial-list {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap;       /* allow multiple rows */
   gap: 20px;
   justify-content: center;
 }
@@ -164,23 +165,25 @@ nav a:hover, nav a.active {
   color: var(--text-muted);
 }
 
-/* Mobile: turn into horizontal scroll carousel */
+/* Mobile override: carousel */
 @media (max-width: 768px) {
   .testimonial-list {
-    flex-wrap: nowrap;
-    overflow-x: auto;
+    flex-wrap: nowrap;             /* single row */
+    overflow-x: auto;              /* scrollable */
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
   }
 
   .testimonial {
-    flex: 0 0 80%; /* each card takes ~80% width */
+    flex: 0 0 80%;                 /* each card ~80% width */
     scroll-snap-align: center;
     margin: 0 10px;
   }
 }
+
+/* Dots */
 .testimonial-dots {
-  display: none; /* hidden on desktop */
+  display: none;
   justify-content: center;
   margin-top: 12px;
   gap: 8px;
@@ -199,12 +202,12 @@ nav a:hover, nav a.active {
   background-color: var(--accent-color);
 }
 
-/* Show dots only on mobile */
 @media (max-width: 768px) {
   .testimonial-dots {
     display: flex;
   }
 }
+
 
 
 /* Toggle Button */
