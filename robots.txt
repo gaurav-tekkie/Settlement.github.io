@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Block large or irrelevant files
+Disallow: /demo-walkthrough.mp4
+
+# Point crawlers to your sitemap
+Sitemap: https://gaurav-tekkie.github.io/Settlement.github.io/sitemap.xml
