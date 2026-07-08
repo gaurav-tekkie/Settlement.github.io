@@ -113,6 +113,100 @@ nav a:hover, nav a.active {
     box-shadow: 0 6px 16px rgba(100, 223, 223, 0.5);
 }
 
+.download-counter {
+  text-align: center;   /* centers the text */
+  display: block;       /* ensures it behaves like a block element */
+  background-color: var(--card-color);
+  color: var(--accent-color);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 12px;
+  margin-top: 8px;
+}
+.testimonials {
+  max-width: 900px;
+  margin: 60px auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.testimonials h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: var(--accent-color);
+}
+
+.testimonial-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.testimonial {
+  background-color: var(--card-color);
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1 1 250px;
+  max-width: 280px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.testimonial p {
+  font-size: 15px;
+  color: var(--text-main);
+  margin-bottom: 10px;
+}
+
+.testimonial span {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* Mobile: turn into horizontal scroll carousel */
+@media (max-width: 768px) {
+  .testimonial-list {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .testimonial {
+    flex: 0 0 80%; /* each card takes ~80% width */
+    scroll-snap-align: center;
+    margin: 0 10px;
+  }
+}
+.testimonial-dots {
+  display: none; /* hidden on desktop */
+  justify-content: center;
+  margin-top: 12px;
+  gap: 8px;
+}
+
+.testimonial-dots span {
+  width: 10px;
+  height: 10px;
+  background-color: var(--text-muted);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.testimonial-dots span.active {
+  background-color: var(--accent-color);
+}
+
+/* Show dots only on mobile */
+@media (max-width: 768px) {
+  .testimonial-dots {
+    display: flex;
+  }
+}
+
+
 /* Toggle Button */
 #toggleBtn {
     position: absolute;
