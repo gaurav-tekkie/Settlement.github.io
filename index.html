@@ -410,18 +410,26 @@ testimonials.forEach((_, i) => {
 });
 
 const dots = dotsContainer.querySelectorAll("span");
+const list = document.querySelector(".testimonial-list");
 
-// Sync dots with scroll
-document.querySelector(".testimonial-list").addEventListener("scroll", () => {
-  const scrollLeft = document.querySelector(".testimonial-list").scrollLeft;
-  const cardWidth = document.querySelector(".testimonial").offsetWidth;
-  const index = Math.round(scrollLeft / cardWidth);
+list.addEventListener("scroll", () => {
+  const scrollCenter = list.scrollLeft + list.offsetWidth / 2;
+
+  let activeIndex = 0;
+  testimonials.forEach((card, i) => {
+    const cardCenter = card.offsetLeft + card.offsetWidth / 2;
+    if (scrollCenter >= cardCenter - card.offsetWidth / 2 &&
+        scrollCenter <= cardCenter + card.offsetWidth / 2) {
+      activeIndex = i;
+    }
+  });
 
   dots.forEach((dot, i) => {
-    dot.classList.toggle("active", i === index);
+    dot.classList.toggle("active", i === activeIndex);
   });
 });
 </script>
+
 
 
 </body>
