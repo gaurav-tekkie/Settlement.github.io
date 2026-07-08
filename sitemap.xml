@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://gaurav-tekkie.github.io/Settlement.github.io/index.html</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- About Us -->
+  <url>
+    <loc>https://gaurav-tekkie.github.io/Settlement.github.io/about-us.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Contact Us -->
+  <url>
+    <loc>https://gaurav-tekkie.github.io/Settlement.github.io/contact-us.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- FAQ -->
+  <url>
+    <loc>https://gaurav-tekkie.github.io/Settlement.github.io/faq.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Privacy Policy -->
+  <url>
+    <loc>https://gaurav-tekkie.github.io/Settlement.github.io/privacy.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- How It Works -->
+  <url>
+    <loc>https://gaurav-tekkie.github.io/Settlement.github.io/how-it-works.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Simulation Sandbox -->
+  <url>
+    <loc>https://gaurav-tekkie.github.io/Settlement.github.io/simulation-sandbox.html</loc>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>
