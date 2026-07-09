@@ -220,10 +220,7 @@
             'B': 'Bob',
             'C': 'Charlie'
         },
-        debts: [
-            { debtor: 'A', creditor: 'B', amount: 50 },  // Alice owes Bob $50
-            { debtor: 'B', creditor: 'C', amount: 50 }   // Bob owes Charlie $50
-        ]
+        debts: []
     };
 
     // --- YOUR SETTLEMENT LOGIC ENGINE ---
@@ -320,10 +317,7 @@
     }
 
     function resetSandbox() {
-        state.debts = [
-            { debtor: 'A', creditor: 'B', amount: 50 },
-            { debtor: 'B', creditor: 'C', amount: 50 }
-        ];
+        state.debts = [];
         state.currentUser = 'A';
         document.getElementById('consoleLog').innerHTML = '';
         logToConsole("Sandbox state reverted to standard chain mock (A ➔ B ➔ C).");

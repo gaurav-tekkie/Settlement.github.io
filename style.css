@@ -208,6 +208,39 @@ nav a:hover, nav a.active {
   }
 }
 
+.download-footer {
+  text-align: center;
+  margin: 60px auto;
+  padding: 20px;
+}
+
+.download-footer h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: var(--accent-color);
+}
+
+.download-footer .download-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: var(--accent-color);
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.download-footer .download-btn:hover {
+  background-color: var(--accent-hover);
+}
+
+.download-footer .download-note {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 10px;
+}
 
 
 /* Toggle Button */
