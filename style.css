@@ -331,3 +331,67 @@ footer {
         padding: 6px 10px;
     }
 }
+/* ==========================================================================
+   FAQ / Terms / Refunds Card Styles
+   ========================================================================== */
+
+.container {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.faq-item {
+    margin-bottom: 30px;
+    background: var(--card-color);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* subtle depth */
+}
+
+.faq-item h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: var(--text-main);
+}
+
+.faq-item p,
+.faq-item ul,
+.faq-item li {
+    color: var(--text-muted);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Responsive tweaks for FAQ/Terms blocks */
+@media (max-width: 768px) {
+    .container {
+        margin: 20px auto;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .faq-item {
+        padding: 18px;
+    }
+
+    .faq-item h3 {
+        font-size: 16px;
+    }
+
+    .faq-item p,
+    .faq-item ul,
+    .faq-item li {
+        font-size: 14px;
+    }
+}
